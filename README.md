@@ -315,6 +315,7 @@ Adding a new System User will not grant them access to servers until they're ass
 |`unix_uid`                       |*integer*  | The unix user id for this user. **Do not change this unless you really know what you're doing. JumpCloud will auto assign ids above 5000+** |  |
 |`unix_guid`                      |*integer*  | The unix group id for this user. **Do not change this unless you really know what you're doing. JumpCloud will auto assign ids above 5000+** |  |
 |`tags`                           |*array*    | An array of tag id's, or names, to which the systemuser belongs. Optional field. If not sent, tag membership will remain unchanged. If tags are sent, the systemuser will be updated to match the specified tag list. To remove all tags, pass in an empty array as the tags property. Note: If the tags property is omitted from the initial request, the response will also omit tag information. |  |
+|`attributes`                     |*array*    | An array of attributes associated with the systemuser.  Attributes are organized in a name and value pair.  If attributes are sent, the systemuser will be updated to match the values passed; i.e., when attributes are PUT, they will replace any existing attributes, not append to the existing data. |  |
 
 ### Routes
 
@@ -427,6 +428,18 @@ curl \
   -H 'Accept: application/json' \
   -H "x-api-key: [YOUR_API_KEY_HERE]" \
   "https://console.jumpcloud.com/api/systemusers"
+```
+
+### Add attributes to a System User
+
+```
+curl \
+ -X 'PUT' \
+ -H 'Content-Type: application/json' \
+ -H 'Accept: application/json' \
+ -H "x-api-key: [YOUR_API_KEY_HERE]" \
+ -d '{ "attributes" : [ { "name" : "myhappyattribute", "value" : "myhappyattributevalue" }] }' \
+ "https://console.jumpcloud.com/api/systemusers/:id"
 ```
 
 ### Find a System User by username
