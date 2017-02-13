@@ -383,8 +383,8 @@ The Command Results section of the JumpCloud API allows you to retrieve and dele
 |`requestTime`    |*date*   | The time that the command was sent.|
 |`responseTime`   |*date*  | The time that the command was completed. |
 |`response.id`    |*string*|This is the same id as the parent.  |
-|`response.data.output`|*integer*|The stdout from the command that ran.|
-|`response.data.exitCode`|*string*|The exit code from the command that ran.|
+|`response.data.output`|*string*|The stdout from the command that ran.|
+|`response.data.exitCode`|*integer*|The exit code from the command that ran.|
 |`response.error`|*string*|The stderr output from the command that ran.|
 
 ### Routes
