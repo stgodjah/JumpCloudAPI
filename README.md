@@ -348,17 +348,17 @@ The System/User Binding section of the JumpCloud API allows you to modify one-to
 ## Command Scheduler
 The Command Scheduler can be used to run commands across your systems/tags either immediately, at a specific time in the future, or repeatedly. Please note that `systems` OR `tags` is a required field. Setting both is unsupported. You can retrieve the results by using the Command Results API.
 
-###Modifiable Properties
+### Modifiable Properties
 |System property  |Type     |Description                        |Required|
 |-----------------|---------|-----------------------------------|:------:|
 |`name`           |*string* | The display name for the command. |        |
 |`command`        |*string* | The command to execute on the server.|**X**|
 |`user`           |*string* | The id of the JC managed user to run the command as.|**X**|
-|`systems`        |*array*  | An array of system ids to run the command on.||
-|`schedule`       |*string* | A crontab that consists of: `(seconds) (minutes) (hours) (days of month) (months) (weekdays)` or `immediate`. If you send this as an empty string, it will run immediately.||
-|`files`          |*array*  | An array of file ids to include with the command.||
-|`tags`           |*array*  | An array of tag ids to run the command on.||
-|`timeout`        |*string* | The time in seconds to allow the command to run for.||
+|`systems`        |*array*  | An array of system ids to run the command on.|
+|`schedule`       |*string* | A crontab that consists of: `(seconds) (minutes) (hours) (days of month) (months) (weekdays)` or `immediate`. If you send this as an empty string, it will run immediately.|
+|`files`          |*array*  | An array of file ids to include with the command.|
+|`tags`           |*array*  | An array of tag ids to run the command on.|
+|`timeout`        |*string* | The time in seconds to allow the command to run for.|
 
 ### Routes
 |Method   |Path             |Description                                 |
