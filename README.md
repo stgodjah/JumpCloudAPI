@@ -1,3 +1,6 @@
+
+**Our API documentation has been moved to [docs.jumpcloud.com](docs.jumpcloud.com) please refer to these docs as this file will not be maintained or updated.**
+
 JumpCloud API
 ============
 
